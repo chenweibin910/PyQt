@@ -1,8 +1,9 @@
 # 各种各样的PyQt测试和例子
 
 [![Blog](https://img.shields.io/badge/blog-pyqt5-green.svg)](https://pyqt5.com)
+[![codebeat badge](https://codebeat.co/badges/d23d0dc8-aef3-43d2-96aa-e3215b2c9861)](https://codebeat.co/projects/github-com-pyqt5-pyqt-master)
 
-https://pyqt5.com 社区是专门针对PyQt5学习和提升开设的博客网站，分享大家平时学习中记录的笔记和例子，以及对遇到的问题进行收集整理。
+https://pyqt.site 论坛是专门针对PyQt5学习和提升开设的网站，分享大家平时学习中记录的笔记和例子，以及对遇到的问题进行收集整理。
 
 [![GitHub watchers](https://img.shields.io/github/watchers/PyQt5/PyQt.svg?style=social&label=Watch)](https://github.com/PyQt5/PyQt)
 [![GitHub stars](https://img.shields.io/github/stars/PyQt5/PyQt.svg?style=social)](https://github.com/PyQt5/PyQt)
@@ -66,6 +67,7 @@ https://pyqt5.com 社区是专门针对PyQt5学习和提升开设的博客网站
     - [通过json数据生成树形结构](QTreeWidget/ParsingJson.py)
     - [拖拽显示为图片](Test/partner_625781186/12.1拖拽显示为图片)
     - [点击父节点全选/取消全选子节点](QTreeWidget/testTreeWidget.py)
+    - [禁止父节点](QTreeWidget/ParentNodeForbid.py)
   - [QTableWidget](QTableWidget)
     - [Sqlalchemy动态拼接字段查询显示表格](QTableWidget/SqlQuery.py)
     - [TableWidget嵌入部件](QTableWidget/TableWidget.py)
@@ -129,9 +131,14 @@ https://pyqt5.com 社区是专门针对PyQt5学习和提升开设的博客网站
     - [获取Cookie](QWebView/GetCookie.py)
     - [和Js交互操作](QWebView/JsSignals.py)
     - [网页整体截图](QWebView/ScreenShotPage.py)
+    - [播放Flash](QWebView/PlayFlash.py)
+    - [拦截请求](QWebView/BlockRequest.py)
   - [QWebEngineView](QWebEngineView)
     - [获取Cookie](QWebEngineView/GetCookie.py)
     - [和Js交互操作](QWebEngineView/JsSignals.py)
+    - [网页整体截图](QWebEngineView/ScreenShotPage.py)
+    - [同网站不同用户](QWebEngineView/SiteDiffUser.py)
+    - [拦截请求](QWebEngineView/BlockRequest.py)
     - [浏览器下载文件](Test/partner_625781186/6.QWebEngineView下载文件)
     - [打印网页](Test/partner_625781186/17_打印预览qwebengineview)
 
@@ -143,19 +150,35 @@ https://pyqt5.com 社区是专门针对PyQt5学习和提升开设的博客网站
 
 - [QtQuick](QtQuick)
   - [Flat样式](QtQuick/FlatStyle.py)
+  - [QML与Python交互](QtQuick/Signals.py)
 
-- [QChart](QChart)
-  - [折线图](QChart/LineChart.py)
-  - [折线堆叠图](QChart/LineStack.py)
-  - [柱状堆叠图](QChart/BarStack.py)
-  - [LineChart自定义xy轴](QChart/CustomXYaxis.py)
-  - [ToolTip提示](QChart/ToolTip.py)
-  - [DynamicSpline动态曲线图](QChart/DynamicSpline.py)
-  
+- [QtChart](QtChart)
+  - [折线图](QtChart/LineChart.py)
+  - [折线堆叠图](QtChart/LineStack.py)
+  - [柱状堆叠图](QtChart/BarStack.py)
+  - [LineChart自定义xy轴](QtChart/CustomXYaxis.py)
+  - [ToolTip提示](QtChart/ToolTip.py)
+  - [DynamicSpline动态曲线图](QtChart/DynamicSpline.py)
+  - [区域图表](QtChart/AreaChart.py)
+  - [柱状图表](QtChart/BarChart.py)
+  - [饼状图表](QtChart/PieChart.py)
+  - [样条图表](QtChart/SplineChart.py)
+  - [百分比柱状图表](QtChart/PercentBarChart.py)
+  - [横向柱状图表](QtChart/HorizontalBarChart.py)
+  - [横向百分比柱状图表](QtChart/HorizontalPercentBarChart.py)
+  - [散点图表](QtChart/ScatterChart.py)
+  - [图表主题动画](QtChart/ChartThemes.py)
+
+- [QtDataVisualization](QtDataVisualization)
+  - [柱状图3D](QtDataVisualization/BarsVisualization.py)
+  - [太阳磁场线](QtDataVisualization/MagneticOfSun.py)
+  - [余弦波3D](QtDataVisualization/ScatterVisualization.py)
+
 - [PyQtGraph](PyQtGraph)
   - [鼠标获取X轴坐标](PyQtGraph/mouseFlow.py)
   - [禁止右键点击功能、鼠标滚轮，添加滚动条等功能](PyQtGraph/graph1.py)
   - [工具类](PyQtGraph/tools.py)
+  - [滚动区相关](PyQtGraph/testGraphAnalysis.py)
   
 - [Animation](QPropertyAnimation)
   - [窗口淡入淡出](QPropertyAnimation/FadeInOut.py)
@@ -165,6 +188,13 @@ https://pyqt5.com 社区是专门针对PyQt5学习和提升开设的博客网站
   - [窗口抖动](QPropertyAnimation/ShakeWindow.py)
   - [窗口翻转动画（仿QQ）](QPropertyAnimation/FlipWidgetAnimation.py)
   - [折叠动画](Test/partner_625781186/2.折叠控件)
+  
+- [RemoteObjects](QtRemoteObjects)
+  - [简单界面数据同步](QtRemoteObjects/SyncUi)
+  - [modelview](QtRemoteObjects/modelview)
+  - [simpleswitch](QtRemoteObjects/simpleswitch)
+
+- [QPainter](QPainter)
 
 - Others
   - [QFont](QFont)
@@ -183,10 +213,13 @@ https://pyqt5.com 社区是专门针对PyQt5学习和提升开设的博客网站
   - [QMessageBox](QMessageBox)
     - [消息对话框倒计时关闭](QMessageBox/CountDownClose.py)
     - [自定义图标等](QMessageBox/CustomColorIcon.py)
+    - [消息框按钮文字汉化](QMessageBox/ChineseText.py)
   - [QFileSystemModel](QFileSystemModel)
     - [自定义图标](QFileSystemModel/CustomIcon.py)
   - [QGraphicsDropShadowEffect](QGraphicsDropShadowEffect)
     - [边框阴影动画](QGraphicsDropShadowEffect/ShadowEffect.py)
+  - [QSystemTrayIcon](QSystemTrayIcon)
+    - [最小化到系统托盘](QSystemTrayIcon/MinimizeToTray.py)
 
 - [Demo](Demo)
   - [重启窗口Widget](Demo/RestartWindow.py)
@@ -217,6 +250,9 @@ https://pyqt5.com 社区是专门针对PyQt5学习和提升开设的博客网站
 
 
 # [Donate-打赏](Donate)
+
+感谢所有捐助者的鼓励，[这里](https://github.com/PyQt5/thanks) 列出了捐助者名单（由于一些收款渠道无法知道对方是谁，如有遗漏请联系我修改）
+
 <a href="javascript:;" alt="微信"><img src="Donate/weixin.png" height="350" width="350"></a>or<a href="javascript:;" alt="支付宝"><img src="Donate/zhifubao.png" height="350" width="350"></a>
 
 [一些Qt写的三方APP](https://github.com/PyQt5/3rd-Apps)
